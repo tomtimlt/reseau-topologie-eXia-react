@@ -8,40 +8,40 @@ const NetworkTopology = () => {
   const [labelOffsets, setLabelOffsets] = useState({});
   const [devices, setDevices] = useState([
     // FAI Routers en haut
-    { id: 'fai1', type: 'router', x: 800, y: 320, name: 'FAI-RT-01', ip: '80.0.0.6', color: '#ff6b6b', interfaces: [{ name: 'FastEthernet0/0', ip: '80.0.0.6' }, { name: 'FastEthernet0/1', ip: null }, { name: 'Serial0/0/0', ip: '80.0.0.14' }, { name: 'Serial0/0/1', ip: '80.0.0.17' }, { name: 'Serial0/1/0', ip: null }, { name: 'Serial0/1/1', ip: null }] },
-    { id: 'fai2', type: 'router', x: 1150, y: 120, name: 'FAI-RT-02', ip: '80.0.0.9', color: '#ff6b6b', interfaces: [{ name: 'FastEthernet0/0', ip: null }, { name: 'FastEthernet0/1', ip: null }, { name: 'Serial0/0/0', ip: '80.0.0.9' }, { name: 'Serial0/0/1', ip: '80.0.0.13' }, { name: 'Serial0/1/0', ip: '80.0.0.22' }, { name: 'Serial0/1/1', ip: null }] },
+    { id: 'fai1', type: 'router', x: 1400, y: 650, name: 'FAI-RT-01', ip: '80.0.0.6', color: '#ff6b6b', interfaces: [{ name: 'FastEthernet0/0', ip: '80.0.0.6' }, { name: 'FastEthernet0/1', ip: null }, { name: 'Serial0/0/0', ip: '80.0.0.14' }, { name: 'Serial0/0/1', ip: '80.0.0.17' }, { name: 'Serial0/1/0', ip: null }, { name: 'Serial0/1/1', ip: null }] },
+    { id: 'fai2', type: 'router', x: 1400, y: 120, name: 'FAI-RT-02', ip: '80.0.0.9', color: '#ff6b6b', interfaces: [{ name: 'FastEthernet0/0', ip: null }, { name: 'FastEthernet0/1', ip: null }, { name: 'Serial0/0/0', ip: '80.0.0.9' }, { name: 'Serial0/0/1', ip: '80.0.0.13' }, { name: 'Serial0/1/0', ip: '80.0.0.22' }, { name: 'Serial0/1/1', ip: null }] },
     { id: 'fai3', type: 'router', x: 900, y: 120, name: 'FAI-RT-03', ip: '80.0.0.33', color: '#ff6b6b', interfaces: [{ name: 'FastEthernet0/0', ip: null }, { name: 'FastEthernet0/1', ip: null }, { name: 'Serial0/0/0', ip: '80.0.0.33' }, { name: 'Serial0/0/1', ip: '80.0.0.21' }, { name: 'Serial0/1/0', ip: '80.0.0.30' }, { name: 'Serial0/1/1', ip: null }] },
     { id: 'fai4', type: 'router', x: 600, y: 120, name: 'FAI-RT-04', ip: '80.0.0.18', color: '#ff6b6b', interfaces: [{ name: 'FastEthernet0/0', ip: null }, { name: 'FastEthernet0/1', ip: null }, { name: 'Serial0/0/0', ip: '80.0.0.18' }, { name: 'Serial0/0/1', ip: '80.0.0.34' }, { name: 'Serial0/1/0', ip: '80.0.0.26' }, { name: 'Serial0/1/1', ip: null }] },
-    { id: 'fai5', type: 'router', x: 350, y: 120, name: 'FAI-RT-05', ip: '90.154.127.254', color: '#ff6b6b', interfaces: [{ name: 'FastEthernet0/0', ip: null }, { name: 'FastEthernet0/1', ip: null }, { name: 'Serial0/0/0', ip: '80.0.0.29' }, { name: 'Serial0/0/1', ip: '80.0.0.25' }, { name: 'Serial0/1/0', ip: '90.154.127.254' }, { name: 'Serial0/1/1', ip: null }] },
+    { id: 'fai5', type: 'router', x: 60, y: 420, name: 'FAI-RT-05', ip: '90.154.127.254', color: '#ff6b6b', interfaces: [{ name: 'FastEthernet0/0', ip: null }, { name: 'FastEthernet0/1', ip: null }, { name: 'Serial0/0/0', ip: '80.0.0.29' }, { name: 'Serial0/0/1', ip: '80.0.0.25' }, { name: 'Serial0/1/0', ip: '90.154.127.254' }, { name: 'Serial0/1/1', ip: null }] },
   
     // Core Routers
-    { id: 'dslam', type: 'router', x: 450, y: 320, name: 'RT-DSLAM', ip: '80.0.0.5', color: '#4ecdc4', interfaces: [{ name: 'FastEthernet0/0', ip: '80.0.0.5' }, { name: 'FastEthernet0/1', ip: null }, { name: 'GigabitEthernet0/0/0', ip: '68.101.36.254' }, { name: 'GigabitEthernet0/1/0', ip: '131.50.62.254' }, { name: 'GigabitEthernet0/2/0', ip: '80.158.3.254' }, { name: 'GigabitEthernet0/3/0', ip: '45.80.255.254' }, { name: 'FastEthernet1/0', ip: '80.0.0.1' }] },
-    { id: 'wan', type: 'router', x: 1400, y: 120, name: 'RT-WAN', ip: '108.177.127.254', color: '#4ecdc4', interfaces: [{ name: 'FastEthernet0/0', ip: null }, { name: 'FastEthernet0/1', ip: null }, { name: 'GigabitEthernet0/0/0', ip: '108.177.127.254' }, { name: 'Serial0/1/0', ip: '80.0.0.10' }, { name: 'Serial0/1/1', ip: null }, { name: 'GigabitEthernet0/2/0', ip: '8.8.8.254' }, { name: 'FastEthernet1/0', ip: '80.0.0.2' }] },
+    { id: 'dslam', type: 'router', x: 450, y: 480, name: 'RT-DSLAM', ip: '80.0.0.5', color: '#4ecdc4', interfaces: [{ name: 'FastEthernet0/0', ip: '80.0.0.5' }, { name: 'FastEthernet0/1', ip: null }, { name: 'GigabitEthernet0/0/0', ip: '68.101.36.254' }, { name: 'GigabitEthernet0/1/0', ip: '131.50.62.254' }, { name: 'GigabitEthernet0/2/0', ip: '80.158.3.254' }, { name: 'GigabitEthernet0/3/0', ip: '45.80.255.254' }, { name: 'FastEthernet1/0', ip: '80.0.0.1' }] },
+    { id: 'wan', type: 'router', x: 900, y: 480, name: 'RT-WAN', ip: '108.177.127.254', color: '#4ecdc4', interfaces: [{ name: 'FastEthernet0/0', ip: null }, { name: 'FastEthernet0/1', ip: null }, { name: 'GigabitEthernet0/0/0', ip: '108.177.127.254' }, { name: 'Serial0/1/0', ip: '80.0.0.10' }, { name: 'Serial0/1/1', ip: null }, { name: 'GigabitEthernet0/2/0', ip: '8.8.8.254' }, { name: 'FastEthernet1/0', ip: '80.0.0.2' }] },
   
     // Client Routers
-    { id: 'biblio', type: 'router', x: 200, y: 550, name: 'RT-BIBLIOTHEQUE', ip: '192.168.0.254', color: '#96ceb4', interfaces: [{ name: 'FastEthernet0/0', ip: '192.168.0.254' }, { name: 'FastEthernet0/1', ip: null }, { name: 'GigabitEthernet0/0/0', ip: '80.158.3.17' }] },
-    { id: 'digi', type: 'router', x: 450, y: 550, name: 'DIGI-RT', ip: '192.168.70.200', color: '#96ceb4', interfaces: [{ name: 'FastEthernet0/0', ip: '192.168.70.200' }, { name: 'FastEthernet0/1', ip: null }, { name: 'GigabitEthernet0/0/0', ip: '68.101.36.129' }] },
-    { id: 'exia_m', type: 'router', x: 100, y: 120, name: 'EXIA-RT-Meraki', ip: '90.154.127.203', color: '#96ceb4', interfaces: [{ name: 'FastEthernet0/0', ip: null }, { name: 'FastEthernet0/1', ip: null }, { name: 'Serial0/0/0', ip: '90.154.127.203' }, { name: 'Serial0/0/1', ip: null }, { name: 'Serial0/1/0', ip: null }, { name: 'Serial0/1/1', ip: null }, { name: 'GigabitEthernet0/2/0', ip: '2001:DB8:1000::2/64' }] },
-    { id: 'exia_o', type: 'router', x: 700, y: 550, name: 'EXIA-RT-Office', ip: '192.168.1.1', color: '#96ceb4', interfaces: [{ name: 'FastEthernet0/0', ip: '192.168.1.1' }, { name: 'FastEthernet0/1', ip: null }, { name: 'GigabitEthernet0/0/0', ip: '131.50.62.245' }] },
+    { id: 'biblio', type: 'router', x: 200, y: 750, name: 'RT-BIBLIOTHEQUE', ip: '192.168.0.254', color: '#96ceb4', interfaces: [{ name: 'FastEthernet0/0', ip: '192.168.0.254' }, { name: 'FastEthernet0/1', ip: null }, { name: 'GigabitEthernet0/0/0', ip: '80.158.3.17' }] },
+    { id: 'digi', type: 'router', x: 450, y: 750, name: 'DIGI-RT', ip: '192.168.70.200', color: '#96ceb4', interfaces: [{ name: 'FastEthernet0/0', ip: '192.168.70.200' }, { name: 'FastEthernet0/1', ip: null }, { name: 'GigabitEthernet0/0/0', ip: '68.101.36.129' }] },
+    { id: 'exia_m', type: 'router', x: 60, y: 90, name: 'EXIA-RT-Meraki', ip: '90.154.127.203', color: '#96ceb4', interfaces: [{ name: 'FastEthernet0/0', ip: null }, { name: 'FastEthernet0/1', ip: null }, { name: 'Serial0/0/0', ip: '90.154.127.203' }, { name: 'Serial0/0/1', ip: null }, { name: 'Serial0/1/0', ip: null }, { name: 'Serial0/1/1', ip: null }, { name: 'GigabitEthernet0/2/0', ip: '2001:DB8:1000::2/64' }] },
+    { id: 'exia_o', type: 'router', x: 700, y: 750, name: 'EXIA-RT-Office', ip: '192.168.1.1', color: '#96ceb4', interfaces: [{ name: 'FastEthernet0/0', ip: '192.168.1.1' }, { name: 'FastEthernet0/1', ip: null }, { name: 'GigabitEthernet0/0/0', ip: '131.50.62.245' }] },
   
-    // Internet
-    { id: 'internet', type: 'cloud', x: 1100, y: 320, name: 'Internet', color: '#6c5ce7', interfaces: [] }
-  ]);
+    ]);
 
   const [connections, setConnections] = useState([
     // Connexions FAI
-    { from: 'internet', to: 'fai1', network: '80.0.0.4/30' },
-    { from: 'fai1', to: 'fai2', network: '80.0.0.8/30' },
-    { from: 'fai2', to: 'fai3', network: '80.0.0.32/30' },
-    { from: 'fai3', to: 'fai4', network: '80.0.0.16/30' },
+    
+    { from: 'fai1', to: 'fai2', network: '80.0.0.12/30' },
+    { from: 'fai2', to: 'fai3', network: '80.0.0.20/30' },
     { from: 'fai4', to: 'fai5', network: '80.0.0.24/30' },
-
+    { from: 'fai5', to: 'fai3', network: '80.0.0.24/30' },
+    { from: 'fai3', to: 'fai4', network: '80.0.0.32/30' },
+    { from: 'fai4', to: 'fai1', network: '80.0.0.16/30' },
     // Connexions Core
-    { from: 'fai1', to: 'dslam', network: '80.0.0.0/30' },
-    { from: 'fai2', to: 'wan', network: '80.0.0.0/30' },
+    { from: 'fai1', to: 'dslam', network: '80.0.0.4/30' },
+    { from: 'fai2', to: 'wan', network: '80.0.0.8/30' },
 
     // Connexions Client
     { from: 'dslam', to: 'biblio', network: '80.158.3.0/24' },
+    {from: 'dslam', to: 'wan', network: '80.0.0.0/30'},
     { from: 'dslam', to: 'digi', network: '68.101.36.0/24' },
     { from: 'dslam', to: 'exia_o', network: '131.50.62.0/24' },
     { from: 'fai5', to: 'exia_m', network: '90.154.127.0/24' } 
@@ -387,21 +387,7 @@ const NetworkTopology = () => {
                 <li key={index}>{iface.name}: {iface.ip || 'No IP'}</li>
               ))}
             </ul>
-            <button 
-              style={{ 
-                backgroundColor: '#ef4444', 
-                color: '#f8fafc', 
-                border: 'none', 
-                padding: '10px 20px', 
-                borderRadius: '8px', 
-                cursor: 'pointer', 
-                transition: 'background-color 0.3s ease',
-                marginTop: '10px'
-              }} 
-              onClick={() => handleDeleteDevice(selectedNode.id)}
-            >
-              Supprimer Appareil
-            </button>
+            {/* Removed the "Supprimer Appareil" button */}
           </div>
         ) : (
           <p style={{ margin: '0', color: '#94a3b8' }}>
