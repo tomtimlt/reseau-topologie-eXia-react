@@ -225,14 +225,14 @@ const NetworkTopology = () => {
         color: '#f8fafc',
         fontSize: '24px',
       }}>
-        Topologie Réseau Interactive
+        Topologie Réseau Funkytown by Thomas L'hostete
       </h2>
       
       <div 
         style={{ 
           position: 'relative', 
           width: '100%', 
-          height: '600px', 
+          height: '800px', // Increased height
           backgroundColor: '#334155',
           borderRadius: '12px',
           border: '1px solid #475569',
@@ -304,7 +304,7 @@ const NetworkTopology = () => {
                 >
                   {network}
                 </text>
-                {draggingNode && (fromDevice.id === draggingNode || toDevice.id === draggingNode) && (
+                {draggingNode && (fromDevice?.id === draggingNode || toDevice?.id === draggingNode) && (
                   <line
                     x1={labelPosition.x}
                     y1={labelPosition.y}
@@ -317,7 +317,7 @@ const NetworkTopology = () => {
                 )}
               </g>
             );
-          })}
+            })}
         </svg>
 
         {devices.map((device) => (
@@ -408,44 +408,6 @@ const NetworkTopology = () => {
             Cliquez sur un appareil pour voir ses détails
           </p>
         )}
-      </div>
-
-      <div style={{ marginTop: '20px', padding: '20px', backgroundColor: '#475569', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', transition: 'all 0.3s ease', userSelect: 'text' }}>
-        <h3 style={{ margin: '0 0 10px 0', color: '#f8fafc' }}>Ajouter un nouvel appareil</h3>
-        <input type="text" placeholder="Nom" value={newDevice.name} onChange={(e) => setNewDevice({ ...newDevice, name: e.target.value })} style={{ backgroundColor: '#334155', color: '#f8fafc', border: '1px solid #475569', borderRadius: '8px', padding: '10px', marginBottom: '10px', width: '100%' }} />
-        <input type="text" placeholder="IP" value={newDevice.ip} onChange={(e) => setNewDevice({ ...newDevice, ip: e.target.value })} style={{ backgroundColor: '#334155', color: '#f8fafc', border: '1px solid #475569', borderRadius: '8px', padding: '10px', marginBottom: '10px', width: '100%' }} />
-        <button style={{ backgroundColor: '#22c55e', color: '#f8fafc', border: 'none', padding: '10px 20px', borderRadius: '8px', cursor: 'pointer', transition: 'background-color 0.3s ease' }} onClick={handleAddDevice}>Ajouter Appareil</button>
-      </div>
-
-      <div style={{ marginTop: '20px', padding: '20px', backgroundColor: '#475569', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', transition: 'all 0.3s ease', userSelect: 'text' }}>
-        <h3 style={{ margin: '0 0 10px 0', color: '#f8fafc' }}>Ajouter une nouvelle connexion</h3>
-        <input type="text" placeholder="De" value={newConnection.from} onChange={(e) => setNewConnection({ ...newConnection, from: e.target.value })} style={{ backgroundColor: '#334155', color: '#f8fafc', border: '1px solid #475569', borderRadius: '8px', padding: '10px', marginBottom: '10px', width: '100%' }} />
-        <input type="text" placeholder="À" value={newConnection.to} onChange={(e) => setNewConnection({ ...newConnection, to: e.target.value })} style={{ backgroundColor: '#334155', color: '#f8fafc', border: '1px solid #475569', borderRadius: '8px', padding: '10px', marginBottom: '10px', width: '100%' }} />
-        <input type="text" placeholder="Réseau" value={newConnection.network} onChange={(e) => setNewConnection({ ...newConnection, network: e.target.value })} style={{ backgroundColor: '#334155', color: '#f8fafc', border: '1px solid #475569', borderRadius: '8px', padding: '10px', marginBottom: '10px', width: '100%' }} />
-        <button style={{ backgroundColor: '#22c55e', color: '#f8fafc', border: 'none', padding: '10px 20px', borderRadius: '8px', cursor: 'pointer', transition: 'background-color 0.3s ease' }} onClick={handleAddConnection}>Ajouter Connexion</button>
-      </div>
-
-      <div style={{ marginTop: '20px', padding: '20px', backgroundColor: '#475569', borderRadius: '8px', boxShadow: '0 2px 4px rgba(0,0,0,0.1)', transition: 'all 0.3s ease', userSelect: 'text' }}>
-        <h3 style={{ margin: '0 0 10px 0', color: '#f8fafc' }}>Supprimer une connexion</h3>
-        {connections.map((connection, index) => (
-          <div key={index} style={{ marginBottom: '10px' }}>
-            <span style={{ color: '#f8fafc' }}>{connection.from} - {connection.to} ({connection.network})</span>
-            <button 
-              style={{ 
-                backgroundColor: '#ef4444', 
-                color: '#f8fafc', 
-                border: 'none', 
-                padding: '5px 10px', 
-                borderRadius: '8px', 
-                cursor: 'pointer', 
-                marginLeft: '10px' 
-              }} 
-              onClick={() => handleDeleteConnection(index)}
-            >
-              Supprimer
-            </button>
-          </div>
-        ))}
       </div>
     </div>
   );
