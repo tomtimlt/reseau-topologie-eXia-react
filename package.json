@@ -2,7 +2,7 @@
   "name": "mon-projet-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tomtimlt.github.io/mon-projet-react",
+  "homepage": "https://tomtimlt.github.io/reseau-topologie-eXia-react/",
   "dependencies": {
     "cra-template": "1.2.0",
     "framer-motion": "^6.5.1",
