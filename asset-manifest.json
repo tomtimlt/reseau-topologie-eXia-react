@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/mon-projet-react/static/css/main.85097d53.css",
-    "main.js": "/mon-projet-react/static/js/main.f22cbbab.js",
-    "static/js/99.eff4cf7f.chunk.js": "/mon-projet-react/static/js/99.eff4cf7f.chunk.js",
-    "index.html": "/mon-projet-react/index.html",
-    "main.85097d53.css.map": "/mon-projet-react/static/css/main.85097d53.css.map",
-    "main.f22cbbab.js.map": "/mon-projet-react/static/js/main.f22cbbab.js.map",
-    "99.eff4cf7f.chunk.js.map": "/mon-projet-react/static/js/99.eff4cf7f.chunk.js.map"
+    "main.css": "/reseau-topologie-eXia-react/static/css/main.85097d53.css",
+    "main.js": "/reseau-topologie-eXia-react/static/js/main.f8f155a9.js",
+    "static/js/99.eff4cf7f.chunk.js": "/reseau-topologie-eXia-react/static/js/99.eff4cf7f.chunk.js",
+    "index.html": "/reseau-topologie-eXia-react/index.html",
+    "main.85097d53.css.map": "/reseau-topologie-eXia-react/static/css/main.85097d53.css.map",
+    "main.f8f155a9.js.map": "/reseau-topologie-eXia-react/static/js/main.f8f155a9.js.map",
+    "99.eff4cf7f.chunk.js.map": "/reseau-topologie-eXia-react/static/js/99.eff4cf7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.85097d53.css",
-    "static/js/main.f22cbbab.js"
+    "static/js/main.f8f155a9.js"
   ]
 }
