@@ -31,7 +31,7 @@ const NetworkTopology = () => {
     
     { from: 'fai1', to: 'fai2', network: '80.0.0.12/30' },
     { from: 'fai2', to: 'fai3', network: '80.0.0.20/30' },
-    { from: 'fai4', to: 'fai5', network: '80.0.0.24/30' },
+    { from: 'fai4', to: 'fai5', network: '80.0.0.28/30' },
     { from: 'fai5', to: 'fai3', network: '80.0.0.24/30' },
     { from: 'fai3', to: 'fai4', network: '80.0.0.32/30' },
     { from: 'fai4', to: 'fai1', network: '80.0.0.16/30' },
