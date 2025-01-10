@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  margin: 0; /* Supprime les marges autour de l'application */
+  padding: 0; /* Supprime tout padding */
+}
+
+.App-header {
+  background-color: #282c34; /* Fond sombre */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; /* Remplace "black" pour contraster avec le fond sombre */
+  border: none; /* Supprime les bordures */
+}
+
+body {
+  margin: 0; /* Supprime les marges globales */
+  background-color: #282c34; /* Assure une couleur uniforme pour tout le fond */
+}
+
+.App-link {
+  color: #61dafb; /* Lien bleu clair */
+}
